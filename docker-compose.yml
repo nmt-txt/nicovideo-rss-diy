@@ -1,0 +1,16 @@
+services:
+  niconico-rss-diy:
+    build: .
+    container_name: niconico-rss-diy
+    environment:
+      - TZ=Asia/Tokyo
+    ports:
+      - "2525:8080" # 2525番ポートへサーバーを割り当て
+    volumes:
+      - ./config.json:/config/config.json # docker-compose.ymlと同位置にconfig.jsonを置くこと
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O - http://localhost:8080/ || exit 1"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3

@@ -1,0 +1,8 @@
+{
+    "searchQueries": [
+        {"query": "VOCALOID OR SynthesizerV OR NEUTRINO OR ソフトウェアシンガー"},
+        {"query": "ソフトウェアトーク実況 OR ソフトウェアトーク実況プレイ"},
+        {"query": "ソフトウェアトーク車載 OR ソフトウェアトーク旅行"}
+    ],
+    "log": "info"
+}
